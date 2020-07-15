@@ -1,0 +1,22 @@
+@startuml
+
+activate player1
+activate player2
+activate player3
+par
+Main -> player1 : runQuiz
+player1 -> player1 : doGuess
+player1 --> Main : Answer
+end
+par
+Main -> player2 : runQuiz
+player2 -> player2 : doGuess
+player2 --> Main : Answer
+end
+par
+Main -> player3 : runQuiz
+player3 -> player3 : doGuess
+player3 --> Main : Answer
+end
+
+@enduml
