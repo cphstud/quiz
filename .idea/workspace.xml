@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfb78a28-e93b-4e38-a8f0-c3e364bf5e72" name="Default Changelist" comment="" />
+    <list default="true" id="bfb78a28-e93b-4e38-a8f0-c3e364bf5e72" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PlayerController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +25,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -28,6 +36,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1edRqMLy843komSj8Z9hHEbeewx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -36,6 +45,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultPlantUmlFileTemplate" value="UML Sequence" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -80,7 +90,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594649672462</updated>
-      <workItem from="1594649674125" duration="7982000" />
+      <workItem from="1594649674125" duration="8405000" />
+      <workItem from="1595271371530" duration="981000" />
     </task>
     <servers />
   </component>
@@ -104,21 +115,21 @@
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="453" y="230" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.828@0.23.1440.828" timestamp="1594794112605" />
-    <state width="1398" height="213" key="GridCell.Tab.0.bottom" timestamp="1594795356463">
+    <state width="1398" height="213" key="GridCell.Tab.0.bottom" timestamp="1594797432450">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="1398" height="213" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1594795356463" />
-    <state width="1398" height="213" key="GridCell.Tab.0.center" timestamp="1594795356461">
+    <state width="1398" height="213" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1594797432450" />
+    <state width="1398" height="213" key="GridCell.Tab.0.center" timestamp="1594797432441">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="1398" height="213" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1594795356461" />
-    <state width="1398" height="213" key="GridCell.Tab.0.left" timestamp="1594795356461">
+    <state width="1398" height="213" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1594797432441" />
+    <state width="1398" height="213" key="GridCell.Tab.0.left" timestamp="1594797432437">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="1398" height="213" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1594795356461" />
-    <state width="1398" height="213" key="GridCell.Tab.0.right" timestamp="1594795356462">
+    <state width="1398" height="213" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1594797432437" />
+    <state width="1398" height="213" key="GridCell.Tab.0.right" timestamp="1594797432445">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1594795356462" />
+    <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1594797432445" />
   </component>
 </project>

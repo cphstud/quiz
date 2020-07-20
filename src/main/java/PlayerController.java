@@ -31,7 +31,7 @@ public class PlayerController {
         }
         Thread.sleep(5000);
         for (Player p: players ) {
-            System.out.println(p.);
+            System.out.println("ans: " );
             p.getAnswers();
         }
     }
