@@ -1,8 +1,7 @@
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class PlayerController {
 
@@ -16,6 +15,7 @@ public class PlayerController {
     }
 
     public void runProgram() throws IOException, InterruptedException {
+        List<Thread> threads = new ArrayList<>();
         Quiz q = new Quiz();
         ServerSocket serverSocket = new ServerSocket(5555);
         System.out.println("Waiting for clients");
@@ -27,12 +27,21 @@ public class PlayerController {
         }
         System.out.println("clients added ...");
         for (Player p: players ) {
-            p.start();
+            p.setName();
+            Thread t = new Thread(p);
+            t.setName(p.getName());
+            t.start();
+            threads.add(t);
         }
-        Thread.sleep(5000);
+        for(Thread t: threads) t.join(10000);
+        Map<Integer, String> tmpAns = new HashMap<>();
         for (Player p: players ) {
             System.out.println("ans: " );
-            p.getAnswers();
+            tmpAns = p.getAnswers();
+            Set<Integer> keys = tmpAns.keySet();
+            for(Integer i: keys) {
+                System.out.println(p.getName() + " has ans to " + i + " is: " + tmpAns.get(i) );
+            }
         }
     }
 }

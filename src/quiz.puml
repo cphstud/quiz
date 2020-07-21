@@ -1,0 +1,23 @@
+@startuml
+
+class PlayerMapper
+class PlayerHandler
+class ConsumerPlayer
+class ProducerGameMaster
+class GameController
+interface Player
+
+GameController -- Player
+GameController -- Quiz
+GameController -- ConsumerPlayer
+GameController -- ProducerGameMaster
+GameController -- PlayerHandler
+PlayerHandler -- PlayerMapper
+
+class Quiz {
+Object[] questions
+size()
+}
+
+
+@enduml
