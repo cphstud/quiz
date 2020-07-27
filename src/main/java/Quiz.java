@@ -17,6 +17,7 @@ public class Quiz {
         quizSolution.put(1,"Wien");
         quizQuestion.put(2,"Hovedstaden i Burkina Faso?");
         quizSolution.put(2,"Ouagadougou");
+        
     }
 
 
