@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -14,14 +15,37 @@ public class Player implements Runnable{
     private String name;
     private PrintWriter pw;
     private BufferedReader br;
-    private Map<Integer, String> questions;
-    private Map<Integer, String> answers;
-
+    private Map<Integer, String> questionsMap;
+    private Map<Integer, String> answersMap;
+    private String[] answers;
+    private ArrayList<Question> questions;
     private boolean isDone;
-    public Player(Socket s, Map<Integer, String> questions) {
+    private boolean simple;
+
+    public Player(Socket s) {
         this.s = s;
+        this.simple = true;
+        try {
+            setPrintWriter();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            setReader();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setQuestions(ArrayList<Question> questions) {
         this.questions = questions;
-        this.answers = new HashMap<>();
+    }
+
+    public Player(Socket s, Map<Integer, String> questions ) {
+        this.s = s;
+        this.questionsMap = questions;
+        this.answersMap = new HashMap<>();
+        this.simple = false;
         try {
             setPrintWriter();
         } catch (IOException e) {
@@ -57,24 +81,31 @@ public class Player implements Runnable{
     public void run() {
         String line = "";
         String answer = "";
+        if (simple) {
+            int runTime = questions.size();
+            answers = new String[runTime];
+            for (int i = 0; i < runTime ; i++) {
 
-        try {
-            this.pw.println("Take the quiz?");
-            answer = br.readLine();
-            Set<Integer> keys = questions.keySet();
-            Long startTime = System.currentTimeMillis();
-            this.starttime = startTime;
-            for ( Integer key : keys ) {
-                System.out.println(questions.get(key));
-                pw.println(questions.get(key));
-                answer = br.readLine();
-                System.out.println(name + " answered: " + answer);
-                answers.put(key,answer);
             }
-            Long stopTime = System.currentTimeMillis();
-            this.stoptime = stopTime;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            try {
+                this.pw.println("Take the quiz?");
+                answer = br.readLine();
+                Set<Integer> keys = questionsMap.keySet();
+                Long startTime = System.currentTimeMillis();
+                this.starttime = startTime;
+                for ( Integer key : keys ) {
+                    System.out.println(questions.get(key));
+                    pw.println(questions.get(key));
+                    answer = br.readLine();
+                    System.out.println(name + " answered: " + answer);
+                    answersMap.put(key,answer);
+                }
+                Long stopTime = System.currentTimeMillis();
+                this.stoptime = stopTime;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -89,8 +120,12 @@ public class Player implements Runnable{
         return this.name;
     }
 
-    public Map<Integer,String> getAnswers() {
+    public Map<Integer,String> getAnswersMap() {
         System.out.println("int get ..");
+        return this.answersMap;
+    }
+    public String[] getAnswers() {
+        System.out.println("int getarr ..");
         return this.answers;
     }
 }

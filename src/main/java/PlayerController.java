@@ -8,6 +8,7 @@ public class PlayerController {
     int maxClients;
     int clientCounter = 0;
     List<Player> players;
+    QuizMapper quizMapper;
 
     public PlayerController(int maxClients) {
         this.maxClients = maxClients;
@@ -16,13 +17,17 @@ public class PlayerController {
 
     public void runProgram() throws IOException, InterruptedException {
         List<Thread> threads = new ArrayList<>();
-        Quiz q = new Quiz();
+        Player player = null;
+        quizMapper = QuizMapper.getInstance("src/main/resources/WTEST");
+        //Quiz q = new Quiz();
+
         ServerSocket serverSocket = new ServerSocket(5555);
         System.out.println("Waiting for clients");
         while(clientCounter < maxClients) {
             clientCounter++;
             Socket s = serverSocket.accept();
-            Player player = new Player(s,q.getQuizQuestions());
+            player = new Player(s);
+
             players.add(player);
         }
         System.out.println("clients added ...");

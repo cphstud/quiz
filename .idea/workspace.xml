@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="bfb78a28-e93b-4e38-a8f0-c3e364bf5e72" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/QuizMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Util/IdFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quizUC.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/QuizMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PlayerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Quiz.class" afterDir="false" />
     </list>
-=======
-    <list default="true" id="bfb78a28-e93b-4e38-a8f0-c3e364bf5e72" name="Default Changelist" comment="" />
->>>>>>> feature-1-questions
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +31,7 @@
         <option value="UML Sequence" />
         <option value="Class" />
         <option value="UML Class" />
+        <option value="UML Use Case" />
       </list>
     </option>
   </component>
@@ -45,7 +53,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultPlantUmlFileTemplate" value="UML Class" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultPlantUmlFileTemplate" value="UML Use Case" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -55,7 +64,15 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.QuizMapperTest">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="firstVault" />
@@ -69,6 +86,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QuizMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="firstVault" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="QuizMapperTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.QuizMapperTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -93,13 +124,6 @@
       <option name="presentableId" value="Default" />
       <updated>1594649672462</updated>
       <workItem from="1594649674125" duration="8405000" />
-<<<<<<< HEAD
-      <workItem from="1595271371530" duration="981000" />
-      <workItem from="1595320382407" duration="3975000" />
-      <workItem from="1595842424306" duration="2516000" />
-=======
-      <workItem from="1595271371530" duration="1237000" />
->>>>>>> feature-1-questions
     </task>
     <servers />
   </component>
@@ -123,37 +147,61 @@
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="453" y="230" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.828@0.23.1440.828" timestamp="1594794112605" />
-    <state width="1398" height="265" key="GridCell.Tab.0.bottom" timestamp="1595450910114">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1480" height="213" key="GridCell.Tab.0.bottom" timestamp="1595926081372">
+      <screen x="1440" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="265" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1595450910114" />
-    <state width="1398" height="265" key="GridCell.Tab.0.center" timestamp="1595450910113">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1480" height="213" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1008@1440.23.1920.1008" timestamp="1595926081372" />
+    <state width="1480" height="213" key="GridCell.Tab.0.center" timestamp="1595926081371">
+      <screen x="1440" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="265" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1595450910113" />
-    <state width="1398" height="265" key="GridCell.Tab.0.left" timestamp="1595450910113">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1480" height="213" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1008@1440.23.1920.1008" timestamp="1595926081371" />
+    <state width="1480" height="213" key="GridCell.Tab.0.left" timestamp="1595926081369">
+      <screen x="1440" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="265" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1595450910113" />
-    <state width="1398" height="265" key="GridCell.Tab.0.right" timestamp="1595450910114">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1480" height="213" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1008@1440.23.1920.1008" timestamp="1595926081369" />
+    <state width="1480" height="213" key="GridCell.Tab.0.right" timestamp="1595926081371">
+      <screen x="1440" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="265" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1595450910114" />
-    <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1595450910117">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1480" height="213" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1008@1440.23.1920.1008" timestamp="1595926081371" />
+    <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1595926081363">
+      <screen x="1440" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="265" key="GridCell.Tab.1.bottom/0.23.1440.828@0.23.1440.828" timestamp="1595450910117" />
-    <state width="1398" height="265" key="GridCell.Tab.1.center" timestamp="1595450910115">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1398" height="265" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1008@1440.23.1920.1008" timestamp="1595926081363" />
+    <state width="1398" height="265" key="GridCell.Tab.1.center" timestamp="1595926081361">
+      <screen x="1440" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="265" key="GridCell.Tab.1.center/0.23.1440.828@0.23.1440.828" timestamp="1595450910115" />
-    <state width="1398" height="265" key="GridCell.Tab.1.left" timestamp="1595450910115">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1398" height="265" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1008@1440.23.1920.1008" timestamp="1595926081361" />
+    <state width="1398" height="265" key="GridCell.Tab.1.left" timestamp="1595926081360">
+      <screen x="1440" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="265" key="GridCell.Tab.1.left/0.23.1440.828@0.23.1440.828" timestamp="1595450910115" />
-    <state width="1398" height="265" key="GridCell.Tab.1.right" timestamp="1595450910116">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1398" height="265" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1008@1440.23.1920.1008" timestamp="1595926081360" />
+    <state width="1398" height="265" key="GridCell.Tab.1.right" timestamp="1595926081362">
+      <screen x="1440" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="265" key="GridCell.Tab.1.right/0.23.1440.828@0.23.1440.828" timestamp="1595450910116" />
+    <state width="1398" height="265" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1008@1440.23.1920.1008" timestamp="1595926081362" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/QuizMapper.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/QuizMapperTest.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

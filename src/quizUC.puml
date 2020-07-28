@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+actor "Quizmaster" as fcm
+actor "Quizzer" as fc
+package Quiz {
+  usecase "Initialize list of questions" as UC1
+  usecase "Get list of questions" as UC2
+  usecase "answer" as UC3
+  usecase "Get answers" as UC4
+  usecase "Evaluate answers" as UC5
+   (UC2) .> (UC3)
+   (UC4) .> (UC5)
+}
+fcm --> (UC1)
+fc --> (UC2)
+fc --> (UC3)
+fcm --> (UC4)
+fcm --> (UC5)
+
+
+note right of (UC1)
+Get from quizmapper
+end note
+
+note "Loop in thread" as N2
+(UC2) .. N2
+N2 .. (UC3)
+@enduml
