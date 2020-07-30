@@ -19,6 +19,8 @@ public class Player implements Runnable{
     private Map<Integer, String> answersMap;
     private String[] answers;
     private ArrayList<Question> questions;
+    private Question[] questionsArr;
+    private static ArrayList<Question> questionsStatic;
     private boolean isDone;
     private boolean simple;
 
@@ -36,9 +38,13 @@ public class Player implements Runnable{
             e.printStackTrace();
         }
     }
+    public void setQuestions(Question[] questions) {
+        this.questionsArr = questions;
+    }
 
     public void setQuestions(ArrayList<Question> questions) {
         this.questions = questions;
+        questionsStatic = questions;
     }
 
     public Player(Socket s, Map<Integer, String> questions ) {
@@ -81,19 +87,29 @@ public class Player implements Runnable{
     public void run() {
         String line = "";
         String answer = "";
+        Long startTime = System.currentTimeMillis();
+        this.starttime = startTime;
+        System.out.println("Q: " + questions.hashCode());
+        System.out.println("Q: " + questionsStatic.hashCode());
         if (simple) {
-            int runTime = questions.size();
+            int runTime = questionsStatic.size();
             answers = new String[runTime];
-            for (int i = 0; i < runTime ; i++) {
-
+            try {
+                for (int i = 0; i < runTime ; i++) {
+                    pw.println(questionsStatic.get(i));
+                    answer = br.readLine();
+                    System.out.println(name + " answered: " + answer);
+                    answers[i] = answer;
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+            pw.println("Another quiz?");
         } else {
             try {
                 this.pw.println("Take the quiz?");
                 answer = br.readLine();
                 Set<Integer> keys = questionsMap.keySet();
-                Long startTime = System.currentTimeMillis();
-                this.starttime = startTime;
                 for ( Integer key : keys ) {
                     System.out.println(questions.get(key));
                     pw.println(questions.get(key));

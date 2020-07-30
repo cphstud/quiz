@@ -12,7 +12,8 @@ public class QuizMapperTest {
 
     @Before
     public void setUp() throws Exception {
-        quizMapper = new QuizMapper("src/main/resources/WTEST");
+        //quizMapper = new QuizMapper("src/main/resources/WTEST");
+        quizMapper = QuizMapper.getInstance("src/main/resources/WTEST");
         questions = new ArrayList<>();
     }
 
