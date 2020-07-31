@@ -89,14 +89,17 @@ public class Player implements Runnable{
         String answer = "";
         Long startTime = System.currentTimeMillis();
         this.starttime = startTime;
-        System.out.println("Q: " + questions.hashCode());
-        System.out.println("Q: " + questionsStatic.hashCode());
+        System.out.println("Q: " + questionsArr.hashCode());
+        //System.out.println("Q: " + questions.hashCode());
+        //System.out.println("Q: " + questionsStatic.hashCode());
         if (simple) {
-            int runTime = questionsStatic.size();
+            //int runTime = questionsStatic.size();
+            int runTime = questionsArr.length;
             answers = new String[runTime];
             try {
                 for (int i = 0; i < runTime ; i++) {
-                    pw.println(questionsStatic.get(i));
+                    //pw.println(questionsStatic.get(i));
+                    pw.println(questionsArr[i]);
                     answer = br.readLine();
                     System.out.println(name + " answered: " + answer);
                     answers[i] = answer;

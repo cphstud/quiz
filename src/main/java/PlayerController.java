@@ -6,6 +6,7 @@ import java.util.*;
 public class PlayerController {
 
     static ArrayList<Question> allQuestionsToBeAsked = new ArrayList<>();
+    static Question[] allQuestionsToBeAskedArr = new Question[24];
     //static ArrayList<Question> firstRound = new ArrayList<>();
     //static ArrayList<Question> secRound = new ArrayList<>();
     int maxClients;
@@ -32,16 +33,18 @@ public class PlayerController {
             clientCounter++;
             Socket s = serverSocket.accept();
             player = new Player(s);
-            player.setQuestions(allQuestionsToBeAsked);
+            player.setQuestions(allQuestionsToBeAskedArr);
             players.add(player);
         }
         ArrayList<Question> firstRound = allQuestionsToBeAsked;
+        Question[] firstRoundArr = allQuestionsToBeAskedArr;
         ArrayList<Question> allQuestions = new ArrayList<>();
         allQuestions = quizMapper.getQuestions();
         for (int i = 0; i < (allQuestions.size()/2) ; i++) {
-            firstRound.add(allQuestions.get(i));
+            firstRoundArr[i] = allQuestions.get(i);
         }
         System.out.println("clients added ...");
+        System.out.println(allQuestions.toString());
         for (Player p: players ) {
             p.setName();
             Thread t = new Thread(p);
@@ -53,17 +56,25 @@ public class PlayerController {
         for(Thread t: threads) t.join(10000);
 
         ArrayList<Question> secRound = allQuestionsToBeAsked;
+        Question[] secRoundArr = allQuestionsToBeAskedArr;
         for (int i = 0; i < (allQuestions.size()/2) ; i++) {
-            secRound.add(allQuestions.get((allQuestions.size()-1)-i));
+            //secRound.add(allQuestions.get((allQuestions.size()-1)-i));
+            secRoundArr[i] = allQuestions.get((allQuestions.size()-1)-i);
         }
         System.out.println("F: " + firstRound);
         System.out.println("S: " + secRound);
+        System.out.println("F: " + firstRoundArr.toString());
+        System.out.println("S: " + secRoundArr.toString());
+        System.out.println("F: " + firstRoundArr);
+        System.out.println("S: " + secRoundArr);
         //secRound = firstRound;
         //firstRound = secRound;
         System.out.println("leaving .." + System.currentTimeMillis());
         System.out.println("F: " + firstRound);
         System.out.println("F: " + firstRound.hashCode());
         System.out.println("S: " + secRound.hashCode());
+        System.out.println("F: " + firstRoundArr);
+        System.out.println("S: " + secRoundArr);
         Map<Integer, String> tmpAnsMap = new HashMap<>();
         String[] tmpAns = new String[quizMapper.getQuestions().size()];
         for (Player p: players ) {
