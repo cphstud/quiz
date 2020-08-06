@@ -1,0 +1,18 @@
+@startmindmap
+* Main
+** Linux fileImport
+*** awk, cut
+** Java fileImport
+** Simple Quiz
+*** Question: hard coded arraylist
+*** Question: file-based arraylist
+** Simple Network Quiz
+*** Telnet
+*** Thread pr socket
+** Medium Quiz
+*** wait-notify on ArrayList
+*** java concurrency collection: CopyOnWriteArrayList
+** Difficult Quiz
+*** BlockingQueue
+*** Broadcast messages to users
+@endmindmap

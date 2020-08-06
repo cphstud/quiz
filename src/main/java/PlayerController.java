@@ -16,7 +16,8 @@ public class PlayerController {
 
     public void runProgram() throws IOException, InterruptedException {
         List<Thread> threads = new ArrayList<>();
-        Quiz q = new Quiz();
+        //Quiz q = new Quiz();
+        
         ServerSocket serverSocket = new ServerSocket(5555);
         System.out.println("Waiting for clients");
         while(clientCounter < maxClients) {

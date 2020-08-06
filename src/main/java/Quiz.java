@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ public class Quiz {
     }
 
     private void initQuiz() {
+        //300	WORLD CAPITALS	Home to NATO & little green sprouts	Brussels
         quizQuestion.put(1,"Hovedstaden i Østrig?");
         quizSolution.put(1,"Wien");
         quizQuestion.put(2,"Hovedstaden i Burkina Faso?");
